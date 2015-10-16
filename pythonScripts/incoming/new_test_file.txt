@@ -1,0 +1,4 @@
+V+shift select line
+v select char
+y copy
+p paste
