@@ -1,8 +1,8 @@
 from flask import Flask, request, render_template
 app = Flask(__name__)
 
-##from tmdb3 import set_key, searchMovie
-##set_key('8756c376f367fb966d3c0dec2c69e1c5')
+from tmdb3 import set_key, searchMovie
+set_key('8756c376f367fb966d3c0dec2c69e1c5')
 
 @app.route("/")
 def root():
@@ -12,10 +12,8 @@ def root():
 def movies():
   if request.method == 'POST':
     keyword = request.form['keyword']
-    return res
-    ##res = searchMovie(keyword)
-    ##print res
-    ##return res[0]
+    res = searchMovie(keyword)
+    return res[0].title
   else:
     return render_template('movies.html')
 
