@@ -1,8 +1,57 @@
 {% extends "base.html" %}
+{% block search %}
+<div id="search">
+    <form action="" method="post" accept-charset="utf-8">
+        <label for="search-field">SEARCH:</label>
+        <input type="text" name="search field" value="Enter MOVIE name here" id="search-field" title="Enter search here" class="blink search-field"  />
+        <input type="submit" value="GO!" class="search-button" />
+    </form>
+</div>
+{% endblock %}
+
 {% block content %}
-  <form action="" method="post" name="form">
-    <label for="name">Name of the movie:</label>
-    <input type="text" name="keyword" id="keyword" />
-    <input type="submit" name="search" id="search" value="Search" />
-  </form>
+<div id="main">
+    <!-- Content -->
+    <div id="content">
+        <!-- Box -->
+        <div class="box">
+            <div class="head">
+                <h2>SEARCH RESULTS:</h2>
+            </div>
+			
+        <div class="cl">&&nbsp;nbsp;</div>
+				
+        {% for m in movies %}			
+            <!-- Movie -->
+            <div class="movie">
+                <div class="movie-image">				
+					{% if m.youtube_trailers|length > 0 %}
+						<a href="{{ m.youtube_trailers[0].geturl() }}" target="_blank">
+						<span class="play"><span class="name">{{ m.title }}</span></span>
+					{% endif %} 
+				  
+					{% if m.poster is not none %}
+						<img src="{{ m.poster.geturl('w92') }}" alt="movie" /></a>
+					{% else %}
+						<img src="{{ url_for('static', filename='styles/images/no-poster.jpg') }}" alt="movie" /></a>
+					{% endif %}						
+				</div>
+				
+            <div class="name">
+				{% if m.homepage != '' %}								
+					<a href="{{ m.homepage }}" target="_blank"><p>{{ m.title|truncate(22, True) }}</p></a>
+				{% else %}
+					<p>{{ m.title|truncate(22, True) }}</p>
+				{% endif %}						
+            </div>
+        </div>
+        <!-- end Movie -->
+		{% endfor %}
+				
+        <div class="cl">&nbsp;</div>
+    </div>
+    <!-- end Box -->
+</div>
+<!-- end Content -->
+<div class="cl">&nbsp;</div>undefined</div>
 {% endblock %}
