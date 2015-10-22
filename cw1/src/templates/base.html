@@ -37,7 +37,14 @@
 			    <li><a href="/mostpopular">MOST POPULAR</a></li>
 			    <li><a href="/toprated">TOP RATED</a></li>
 			</ul>
-			{% block search %} {% endblock %}
+			<div id="search">
+				<form action="" method="post" accept-charset="utf-8">
+					<label for="search-field">SEARCH:</label>
+					<input type="text" name="search field" value="Enter {{search|default('MOVIE')}} name here" id="search-field"  class="blink search-field"  
+						onclick="if(this.value=='Enter {{search|default('MOVIE')}} name here') this.value=''" onblur="if(this.value=='') this.value='Enter {{search|default('MOVIE')}} name here'"/>
+					<input type="submit" value="GO!" class="search-button" />
+				</form>
+			</div>
 		</div>
 		<!-- end Sub-Menu -->
 		

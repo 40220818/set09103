@@ -26,7 +26,7 @@ def movies():
     else:
       #res.sort(key = lambda movie: movie.popularity)
       #return ',,,'.join(m.title for m in res)  
-      return render_template('movies.html', title='Movies', pageActive='movies', movies=res)
+      return render_template('movies.html', title='Movies', pageActive='movies', movies=res[0:15])
   else:
     return render_template('movies.html', title='Movies', pageActive='movies')
 
@@ -39,9 +39,9 @@ def people():
     if len(res) == 0:
       return redirect(url_for('noresults'))
     else:
-      return render_template('people.html', title='People', pageActive='people', people=res)
+      return render_template('people.html', title='People', pageActive='people', searchValue='PERSON', people=res[0:15])
   else:
-    return render_template('people.html', title='People', pageActive='people')
+    return render_template('people.html', title='People', pageActive='people', searchValue='PERSON')
 
 
 @app.route("/studios/", methods=['POST', 'GET'])
@@ -52,9 +52,9 @@ def studios():
     if len(res) == 0:
       return redirect(url_for('noresults'))
     else:
-      return render_template('studios.html', title='Studios', pageActive='studios', studios=res)
+      return render_template('studios.html', title='Studios', pageActive='studios', searchValue='STUDIO', studios=res[0:15])
   else:
-    return render_template('studios.html', title='Studios', pageActive='studios')
+    return render_template('studios.html', title='Studios', pageActive='studios', searchValue='STUDIO')
 
 
 @app.route("/contact/")
@@ -64,30 +64,26 @@ def contact():
   
 @app.route("/nowplaying/")
 def nowplaying():
-  movies = Movie.nowplaying()
-  res = movies[0:15]
-  return render_template('movies.html', title='Now playing | Movies', pageActive='movies', movies=res)
+  res = Movie.nowplaying()
+  return render_template('movies.html', title='Now playing | Movies', pageActive='movies', movies=res[0:15])
 
 
 @app.route("/upcoming/")
 def upcoming():
-  movies = Movie.upcoming()
-  res = movies[0:15]
-  return render_template('movies.html', title='Upcoming | Movies', pageActive='movies', movies=res)
+  res = Movie.upcoming()
+  return render_template('movies.html', title='Upcoming | Movies', pageActive='movies', movies=res[0:15])
 
 
 @app.route("/mostpopular/")
 def mostpopular():
-  movies = Movie.mostpopular()
-  res = movies[0:15]
-  return render_template('movies.html', title='Most popular | Movies', pageActive='movies', movies=res)
+  res = Movie.mostpopular()
+  return render_template('movies.html', title='Most popular | Movies', pageActive='movies', movies=res[0:15])
 
   
 @app.route("/toprated/")
 def toprated():
-  movies = Movie.toprated()
-  res = movies[0:15]
-  return render_template('movies.html', title='Top rated | Movies', pageActive='movies', movies=res)
+  res = Movie.toprated()
+  return render_template('movies.html', title='Top rated | Movies', pageActive='movies', movies=res[0:15])
 
 
 @app.route("/contact/", methods=['POST'])
@@ -103,7 +99,7 @@ def searchmovies():
   if len(res) == 0:
     return redirect(url_for('noresults'))
   else:
-    return render_template('movies.html', title='Movies', pageActive='movies', movies=res)
+    return render_template('movies.html', title='Movies', pageActive='movies', movies=res[0:15])
 	
 
 @app.errorhandler(404)
