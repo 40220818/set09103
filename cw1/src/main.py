@@ -10,11 +10,12 @@ def root():
   #return render_template('base.html', title='Main', pageActive='home')
   return redirect(url_for('movies'))
 
+  
 @app.route("/noresults/")
 def noresults():
-  return render_template('no_results.html', title='No results')
+    return render_template('no_results.html', title='No results')
 
-  
+	
 @app.route("/movies/", methods=['POST', 'GET'])
 def movies():
   if request.method == 'POST':
@@ -88,6 +89,22 @@ def toprated():
   res = movies[0:15]
   return render_template('movies.html', title='Top rated | Movies', pageActive='movies', movies=res)
 
+
+@app.route("/contact/", methods=['POST'])
+@app.route("/nowplaying/", methods=['POST'])
+@app.route("/upcoming/", methods=['POST'])
+@app.route("/mostpopular/", methods=['POST'])
+@app.route("/toprated/", methods=['POST'])
+@app.route("/noresults/", methods=['POST'])
+@app.route("/notfound/", methods=['POST'])
+def searchmovies():
+  keyword = request.form['search field']
+  res = searchMovie(keyword)
+  if len(res) == 0:
+    return redirect(url_for('noresults'))
+  else:
+    return render_template('movies.html', title='Movies', pageActive='movies', movies=res)
+	
 
 @app.errorhandler(404)
 def page_not_found(error):
