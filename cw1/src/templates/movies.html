@@ -19,7 +19,7 @@
                 <h2>SEARCH RESULTS:</h2>
             </div>
 			
-        <div class="cl">&&nbsp;nbsp;</div>
+        <div class="cl">&nbsp;&nbsp;</div>
 				
         {% for m in movies %}			
             <!-- Movie -->
@@ -37,21 +37,23 @@
 					{% endif %}						
 				</div>
 				
-            <div class="name">
-				{% if m.homepage != '' %}								
-					<a href="{{ m.homepage }}" target="_blank"><p>{{ m.title|truncate(22, True) }}</p></a>
-				{% else %}
-					<p>{{ m.title|truncate(22, True) }}</p>
-				{% endif %}						
-            </div>
-        </div>
+				<div class="name">
+					{% if m.homepage != '' %}								
+						<a href="{{ m.homepage }}" target="_blank"><p>{{ m.title|truncate(22, True) }}</p></a>
+					{% else %}
+						<p>{{ m.title|truncate(22, True) }}</p>
+					{% endif %}						
+				</div>
+			</div>
         <!-- end Movie -->
 		{% endfor %}
 				
         <div class="cl">&nbsp;</div>
+        </div>
+        <!-- end Box -->
     </div>
-    <!-- end Box -->
+    <!-- end Content -->
+    <div class="cl">&nbsp;</div>
 </div>
-<!-- end Content -->
-<div class="cl">&nbsp;</div>undefined</div>
 {% endblock %}
+
