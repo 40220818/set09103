@@ -2,6 +2,7 @@ import ConfigParser
 import bcrypt
 import logging
 
+from datastore import addUser, getUserPassword
 from logging.handlers import RotatingFileHandler
 from functools import wraps
 from flask import Flask, redirect, render_template, request, session, flash, url_for
@@ -9,12 +10,14 @@ from flask import Flask, redirect, render_template, request, session, flash, url
 app = Flask(__name__)
 app.secret_key ='\xd1\xdb?\xe7!Y\xa5\xb8\xf0x\x17\xa8:\xa6\xfd\xf0\xdaH\x1b\xbe\xad\x11\x95|'
 
-valid_email = 'rubenyes@gmail.com'
-valid_pwhash = bcrypt.hashpw('secretpass', bcrypt.gensalt())
+#valid_email = 'rubenyes@gmail.com'
+#valid_pwhash = bcrypt.hashpw('secretpass', bcrypt.gensalt())
 
 def check_auth(email, password):
-	if(email == valid_email and
-		valid_pwhash == bcrypt.hashpw(password.encode('utf-8'), valid_pwhash)):
+	#if(email == valid_email and valid_pwhash == bcrypt.hashpw(password.encode('utf-8'), valid_pwhash)):
+	pwhashStored = getUserPassword(email)
+	print pwhashStored
+	if(pwhashStored is not None and pwhashStored == bcrypt.hashpw(password.encode('utf-8'), pwhashStored)):
 		return True
 	return False
 
@@ -30,6 +33,7 @@ def requires_login(f):
 @app.route('/logout/')
 def logout():
 	session['logged_in'] = False
+	app.logger.info("User: "+email+" has log out.")
 	return redirect(url_for('.root'))
 
 @app.route("/secret/")
@@ -37,22 +41,47 @@ def logout():
 def secret():
 	return "Secret Page"
 
-@app.route("/", methods=['GET','POST'])
+@app.route("/login/", methods=['GET','POST'])
+def login():
+	if request.method =='POST':
+		email = request.form['email']
+		pw = request.form['password']
+		if check_auth(email, pw):
+			session['logged_in'] = True
+			app.logger.info("User: "+email+" log in SUCCESFUL.")
+			return redirect(url_for('.secret'))
+		else:
+			flash("Incorrect email or password")
+			app.logger.info("User: "+email+" log in FAILED.")
+	return render_template('login.html')
+	
+@app.route("/signup/", methods=['GET','POST'])
+def signup():
+	if request.method =='POST':
+		name = request.form['name']
+		email = request.form['email']
+		pw = request.form['password']
+		pw2 = request.form['password2']
+		if pw == pw2:
+			pwhash = bcrypt.hashpw(pw, bcrypt.gensalt())
+			addUser(name, email, pwhash)
+			app.logger.info("New user registered: "+email)
+			return "Congratulations "+name+"!!! Now you are an user of Snapgram."
+			#return redirect(url_for('signupSuccesful', name=name))
+		else:
+			flash("The passwords don't match.")
+	return render_template('signup.html')
+
+#@app.route("/signup/<name>")
+#def signupSuccesful(name):
+#	return "Congratulations "+name+"!!! Now you are an user of Snapgram."
+
+@app.route("/")
 def root():
 	this_route = url_for('.root')
 	app.logger.info("Logging a test message from "+this_route)
+	return "Root page"
 
-	if request.method =='POST':
-		user = request.form['email']
-		pw = request.form['password']
-		if check_auth(user, pw):
-			session['logged_in'] = True
-			return redirect(url_for('.secret'))
-		else:
-			flash("Incorrect user or password")
-	return render_template('login.html')
-	
-	
 @app.errorhandler(404)
 def page_not_found(error):
 	return render_template('not_found.html', title='Page not found')
