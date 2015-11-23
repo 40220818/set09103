@@ -1,0 +1,21 @@
+<html>
+<head>
+</head>
+<body>
+
+<form name ="login_form" action ="" method ="post">
+	<input type ="email" placeholder ="Email" name ="email">
+	<input type ="password" placeholder ="Password" name ="password">
+	<button type ="submit" class ="btn" name ="button" value ="login">
+		Sign In
+	</button>
+</form>
+
+{% with messages = get_flashed_messages () %}
+	{% if messages %}
+		<h3>{{ messages[0] }}</h3>
+	{% endif %}
+{% endwith %}
+
+</body>
+<html>
