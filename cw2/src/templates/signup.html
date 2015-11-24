@@ -1,25 +1,62 @@
-<html>
-<head>
-	<title>Sign up</title>
-	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
-</head>
-<body>
-
-<form name="signup_form" action="" method="post">
-	<input type="text" placeholder="Name" name="name">
-	<input type="email" placeholder="Email" name="email">
-	<input type="password" placeholder="Password" name="password">
-	<input type="password" placeholder="Confirm Password" name="password2">
-	<button type="submit" class="btn" name="button" value="Sign Up">
-		Sign Up
-	</button>
-</form>
-
-{% with messages= get_flashed_messages () %}
-	{% if messages %}
-		<h3>{{ messages[0] }}</h3>
-	{% endif %}
-{% endwith %}
-
-</body>
-<html>
+{% extends "base.html" %}
+{% block content %}
+<!-- Top content -->
+<div class="top-content">
+	
+	<div class="inner-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2 text">
+					<h1><strong>Bootstrap</strong> Sign up</h1>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3 form-box">
+					<div class="form-top">
+						<div class="form-top-left">
+							<h3>Sign up now</h3>
+							<p>Fill in the form below to create your account:</p>
+						</div>
+						<div class="form-top-right">
+							<i class="fa fa-pencil"></i>
+						</div>
+					</div>
+					<div class="form-bottom">
+						<form role="form" action="" method="post" class="form">
+							<div class="form-group">
+								<label class="sr-only" for="form-first-name">Name</label>
+								<input type="text" name="name" placeholder="Name..." class="form-first-name form-control" id="form-first-name">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="form-last-name">Username</label>
+								<input type="text" name="user" placeholder="Username..." class="form-last-name form-control" id="form-last-name">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="form-email">Email</label>
+								<input type="text" name="email" placeholder="Email..." class="form-email form-control" id="form-email">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="form-password">Password</label>
+								<input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
+							</div>
+							<div class="form-group">
+								<label class="sr-only" for="form-password">Confirm Password</label>
+								<input type="password" name="password2" placeholder="Confirm password..." class="form-password form-control" id="form-password2">
+							</div>
+							<button type="submit" class="btn">Sign me up!</button>
+							{% with messages= get_flashed_messages () %}
+								{% if messages %}
+									<div class="errormessage">
+										<p>{{ messages[0] }}</p>
+									</div>
+								{% endif %}
+							{% endwith %}
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+{% endblock %}

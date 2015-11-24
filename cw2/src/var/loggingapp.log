@@ -20,3 +20,47 @@ INFO | 2015-11-24 00:44:33,583 | main | root | Logging a test message from /
 INFO | 2015-11-24 00:44:46,367 | main | login | User: err@ethreg.com log in FAILED.
 INFO | 2015-11-24 00:46:32,224 | main | login | User: rubenbriones2005@yahoo.es log in FAILED.
 INFO | 2015-11-24 00:46:35,890 | main | root | Logging a test message from /
+INFO | 2015-11-24 01:07:36,015 | main | root | Logging a test message from /
+INFO | 2015-11-24 01:09:10,983 | main | root | Logging a test message from /
+INFO | 2015-11-24 01:15:17,351 | main | root | Logging a test message from /
+INFO | 2015-11-24 01:15:18,042 | main | root | Logging a test message from /
+INFO | 2015-11-24 01:25:32,374 | main | root | Logging a test message from /
+INFO | 2015-11-24 01:34:25,380 | main | login | User: guillermo log in FAILED.
+INFO | 2015-11-24 01:34:38,007 | main | login | User: guillermo@gmail.com log in FAILED.
+INFO | 2015-11-24 01:37:42,069 | main | login | User: guillermo@gmail.com log in FAILED.
+INFO | 2015-11-24 01:37:52,044 | main | login | User: guillermo@gmail.com log in FAILED.
+INFO | 2015-11-24 01:37:58,666 | main | login | User: guillermo@gmail.com log in FAILED.
+INFO | 2015-11-24 01:38:10,686 | main | login | User: guillermo@gmail.com log in FAILED.
+INFO | 2015-11-24 01:39:51,491 | main | login | User: guillermo@gmail.com log in FAILED.
+INFO | 2015-11-24 01:40:14,385 | main | login | User: guillermo@gmail.com log in FAILED.
+INFO | 2015-11-24 01:40:19,033 | main | root | Logging a test message from /
+INFO | 2015-11-24 01:40:31,637 | main | root | Logging a test message from /
+INFO | 2015-11-24 01:40:32,126 | main | root | Logging a test message from /
+INFO | 2015-11-24 01:42:03,067 | main | signup | New user registered: a@gmail.com
+INFO | 2015-11-24 01:42:24,639 | main | login | User: a@gmail.com log in SUCCESFUL.
+INFO | 2015-11-24 01:43:06,616 | main | login | User: a@gmail.com log in FAILED.
+INFO | 2015-11-24 01:43:18,789 | main | login | User: a@gmail.com log in FAILED.
+INFO | 2015-11-24 01:43:28,458 | main | login | User: a@gmail.com log in FAILED.
+INFO | 2015-11-24 01:50:17,728 | main | login | User: a@gmail.com log in FAILED.
+INFO | 2015-11-24 01:50:39,578 | main | login | User: a@gmail.com log in FAILED.
+INFO | 2015-11-24 01:53:31,372 | main | login | User: a@gmail.com log in FAILED.
+INFO | 2015-11-24 01:53:59,075 | main | login | User: rubenbriones2005@yahoo.es log in FAILED.
+INFO | 2015-11-24 01:54:06,337 | main | root | Logging a test message from /
+INFO | 2015-11-24 01:54:17,645 | main | login | User: a@gmail.com log in FAILED.
+INFO | 2015-11-24 01:54:42,422 | main | login | User: a@gmail.com log in FAILED.
+INFO | 2015-11-24 01:58:30,260 | main | login | User: a@gmail.com log in FAILED.
+INFO | 2015-11-24 01:58:52,635 | main | login | User: a@gmail.com log in FAILED.
+INFO | 2015-11-24 01:59:34,490 | main | login | User: a@gmail.com log in FAILED.
+INFO | 2015-11-24 18:22:11,603 | main | root | Logging a test message from /
+INFO | 2015-11-24 18:27:49,975 | main | root | Logging a test message from /
+INFO | 2015-11-24 18:57:54,061 | main | root | Logging a test message from /
+INFO | 2015-11-24 19:01:16,209 | main | root | Logging a test message from /
+INFO | 2015-11-24 19:46:15,569 | main | root | Logging a test message from /
+INFO | 2015-11-24 20:02:45,369 | main | signup | New user registered: rubenyes	rubenyes@gmail.com
+INFO | 2015-11-24 20:10:27,669 | main | signup | New user registered: sergioyes	sergio@gmail.com
+INFO | 2015-11-24 20:11:29,992 | main | login | User: rubenyes log in FAILED.
+INFO | 2015-11-24 20:11:45,855 | main | login | User: rubenyes log in FAILED.
+INFO | 2015-11-24 20:12:01,719 | main | login | User: rubenyes log in SUCCESFUL.
+INFO | 2015-11-24 20:12:08,762 | main | login | User: yr log in FAILED.
+INFO | 2015-11-24 20:12:15,319 | main | login | User: rubenyes log in SUCCESFUL.
+INFO | 2015-11-24 20:15:02,390 | main | login | User: rh log in FAILED.

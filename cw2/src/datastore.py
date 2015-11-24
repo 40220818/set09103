@@ -26,15 +26,14 @@ def init_db():
 			db.cursor().executescript(f.read())
 		db.commit()
 
-def addUser(name, email, pw):
+def addUser(name, user, email, pw):
 	db = get_db ()
-	#db.cursor().execute('INSERT INTO users VALUES ('+name+', '+email+', '+pw+')')
-	db.cursor().execute('INSERT INTO users VALUES (?, ?, ?)', (name, email, pw))
+	db.cursor().execute('INSERT INTO users VALUES (?, ?, ?, ?)', (name, user, email, pw))
 	db.commit()
 	
-def getUserPassword(email):
+def getUserPassword(user):
 	db = get_db ()
-	user = db.cursor().execute('SELECT pass FROM users WHERE email=?', (email,)).fetchone()
-	if user is not None:
-		return user[0] #the password is the 0 position because in the select we only put the pass column
+	result = db.cursor().execute('SELECT pass FROM users WHERE user=?', (user,)).fetchone()
+	if result is not None:
+		return result[0] #the password is the 0 position because in the select we only put the pass column
 	return None
