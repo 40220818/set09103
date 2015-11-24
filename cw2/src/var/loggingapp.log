@@ -15,3 +15,8 @@ INFO | 2015-11-23 20:32:25,580 | main | login | User: guillermo@gmail.com log in
 INFO | 2015-11-23 20:32:34,181 | main | login | User: guillermo@gmail.com log in SUCCESFUL.
 INFO | 2015-11-23 20:32:51,757 | main | login | User: rubenbriones2005@yahoo.es log in FAILED.
 INFO | 2015-11-23 20:32:59,026 | main | login | User: rubenbriones2005@yahoo.es log in SUCCESFUL.
+INFO | 2015-11-24 00:40:26,594 | main | root | Logging a test message from /
+INFO | 2015-11-24 00:44:33,583 | main | root | Logging a test message from /
+INFO | 2015-11-24 00:44:46,367 | main | login | User: err@ethreg.com log in FAILED.
+INFO | 2015-11-24 00:46:32,224 | main | login | User: rubenbriones2005@yahoo.es log in FAILED.
+INFO | 2015-11-24 00:46:35,890 | main | root | Logging a test message from /
