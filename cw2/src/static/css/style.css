@@ -1,3 +1,35 @@
+.top-buffer { margin-top: 50px; }
+
+table#tableSearch {
+    border-collapse: collapse;   
+	table-layout: fixed;
+}
+#tableSearch tr {
+	width: 50%;
+    background-color: #eee;
+    border-top: 1px solid #fff;
+}
+#tableSearch td {
+    overflow: hidden;
+}
+
+.table a
+{
+  display: block;
+    margin: -10em;
+    padding: 10em;
+    cursor: pointer;
+}
+
+#bg {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+	
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -108,7 +140,7 @@ ul.navbar-nav {
 .navbar-inverse ul.navbar-nav li .li-social a:focus { border: 0; color: #19b9e7; }
 
 .navbar-brand {
-	width: 123px;
+	width: 160px;
 	background: url(../img/logo.png) left center no-repeat;
 	text-indent: -99999px;
 }
@@ -227,7 +259,7 @@ only screen and (                min-resolution: 2dppx) {
 	
 	/* logo */
     .navbar-brand {
-    	background-image: url(../img/logo@2x.png) !important; background-repeat: no-repeat !important; background-size: 123px 49px !important;
+    	background-image: url(../img/logo@2x.png) !important; background-repeat: no-repeat !important; background-size: 160px 49px !important;
     }
 	
 }

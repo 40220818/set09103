@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styleUser.css') }}">
+    <header>
+        <div class="titles">
+            <h1>{{ user[0] }}</h1>
+            <h2>{{ user[1] }}</h2>
+        </div>
+    </header>
+    <section class="instagram-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="instagram-content">
+                        <h3>Latest Photos</h3>
+                        <div class="row photos-wrap">												
+							{% for obj in images %}
+								<!-- Image code -->
+								<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+									<div class="photo-box">
+										<div class="image-wrap">
+											<img src="data:;base64,{{ obj[1] | b64encode}}" width="262.5" height="196">
+										</div>
+										<div class="description">
+											{{ obj[2] }}
+											<div class="date">{{ obj[3] | truncate(16, True, '')}}</div>
+										</div>
+									</div>
+								</div>
+								<!-- END Image code -->
+							{% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700|Kaushan+Script|Montserrat' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+{% endblock %}

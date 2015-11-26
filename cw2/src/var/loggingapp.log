@@ -64,3 +64,106 @@ INFO | 2015-11-24 20:12:01,719 | main | login | User: rubenyes log in SUCCESFUL.
 INFO | 2015-11-24 20:12:08,762 | main | login | User: yr log in FAILED.
 INFO | 2015-11-24 20:12:15,319 | main | login | User: rubenyes log in SUCCESFUL.
 INFO | 2015-11-24 20:15:02,390 | main | login | User: rh log in FAILED.
+INFO | 2015-11-26 12:50:41,719 | main | root | Logging a test message from /
+INFO | 2015-11-26 12:51:15,749 | main | signup | New user registered: a	a@a.com
+INFO | 2015-11-26 12:51:31,063 | main | login | User: a log in SUCCESFUL.
+INFO | 2015-11-26 13:53:33,130 | main | login | User: a log in FAILED.
+INFO | 2015-11-26 13:53:53,990 | main | signup | New user registered: a	a@a.a
+INFO | 2015-11-26 13:54:03,688 | main | login | User: a log in SUCCESFUL.
+INFO | 2015-11-26 15:48:12,819 | main | root | Logging a test message from /
+INFO | 2015-11-26 16:04:32,012 | main | upload | User: a has upload a new photo: 2015 11 25 Grafico Abengoa.png
+INFO | 2015-11-26 16:47:25,513 | main | upload | User: a has upload a new photo: 5.JPG
+INFO | 2015-11-26 16:47:35,677 | main | upload | User: a has upload a new photo: 6.JPG
+INFO | 2015-11-26 16:47:44,874 | main | upload | User: a has upload a new photo: 7.JPG
+INFO | 2015-11-26 16:47:52,709 | main | upload | User: a has upload a new photo: Foto (3).JPG
+INFO | 2015-11-26 16:47:59,472 | main | upload | User: a has upload a new photo: Foto (11).JPG
+INFO | 2015-11-26 17:40:04,634 | main | root | Logging a test message from /
+INFO | 2015-11-26 17:40:58,058 | main | root | Logging a test message from /
+INFO | 2015-11-26 17:41:01,642 | main | root | Logging a test message from /
+INFO | 2015-11-26 17:41:09,258 | main | login | User: a log in SUCCESFUL.
+INFO | 2015-11-26 17:41:38,729 | main | upload | User: a has upload a new photo: 1994.jpg
+INFO | 2015-11-26 18:21:19,337 | main | root | Logging a test message from /
+INFO | 2015-11-26 18:21:24,939 | main | root | Logging a test message from /
+INFO | 2015-11-26 18:21:27,659 | main | root | Logging a test message from /
+INFO | 2015-11-26 18:22:40,345 | main | root | Logging a test message from /
+INFO | 2015-11-26 18:22:53,708 | main | login | User: a log in SUCCESFUL.
+INFO | 2015-11-26 18:22:53,804 | main | root | Logging a test message from /
+INFO | 2015-11-26 18:22:54,814 | main | root | Logging a test message from /
+INFO | 2015-11-26 18:22:56,437 | main | root | Logging a test message from /
+INFO | 2015-11-26 18:26:10,905 | main | login | User: a log in SUCCESFUL.
+INFO | 2015-11-26 18:30:27,895 | main | root | Logging a test message from /
+INFO | 2015-11-26 19:02:58,884 | main | login | User: a log in SUCCESFUL.
+INFO | 2015-11-26 19:04:38,553 | main | logout | User: a has log out.
+INFO | 2015-11-26 19:04:38,862 | main | root | Logging a test message from /
+INFO | 2015-11-26 19:05:10,651 | main | login | User: a log in SUCCESFUL.
+INFO | 2015-11-26 19:09:42,906 | main | root | Logging a test message from /
+INFO | 2015-11-26 19:09:54,902 | main | login | User: a log in SUCCESFUL.
+INFO | 2015-11-26 19:12:50,495 | main | root | Logging a test message from /
+INFO | 2015-11-26 19:46:51,952 | main | login | User: a log in SUCCESFUL.
+INFO | 2015-11-26 19:49:36,276 | main | upload | User: a has upload a new photo: Piña de Amigos.jpg
+INFO | 2015-11-26 20:02:04,756 | main | upload | User: a has upload a new photo: 1684-poster.jpg
+INFO | 2015-11-26 20:02:15,860 | main | upload | User: a has upload a new photo: 1687-poster.jpg
+INFO | 2015-11-26 20:02:39,898 | main | upload | User: a has upload a new photo: img234.jpg
+INFO | 2015-11-26 20:12:53,663 | main | logout | User: a has log out.
+INFO | 2015-11-26 20:12:53,745 | main | root | Logging a test message from /
+INFO | 2015-11-26 20:39:44,932 | main | root | Logging a test message from /
+INFO | 2015-11-26 20:40:58,657 | main | search | New search executed: a
+INFO | 2015-11-26 20:42:44,790 | main | search | New search executed: a
+INFO | 2015-11-26 20:44:51,470 | main | search | New search executed: a
+INFO | 2015-11-26 20:45:54,012 | main | search | New search executed: a
+INFO | 2015-11-26 20:49:49,155 | main | search | New search executed: a
+INFO | 2015-11-26 20:49:56,613 | main | search | New search executed: a
+INFO | 2015-11-26 20:52:51,373 | main | search | New search executed: a
+INFO | 2015-11-26 20:53:47,398 | main | search | New search executed: a
+INFO | 2015-11-26 21:04:13,768 | main | search | New search executed: a
+INFO | 2015-11-26 21:06:54,953 | main | search | New search executed: a
+INFO | 2015-11-26 21:07:46,057 | main | search | New search executed: a
+INFO | 2015-11-26 21:08:11,948 | main | signup | New user registered: aa	aa@aa.aa
+INFO | 2015-11-26 21:08:26,260 | main | signup | New user registered: aaa	aaa@aaa.aaa
+INFO | 2015-11-26 21:08:29,333 | main | search | New search executed: a
+INFO | 2015-11-26 21:08:46,181 | main | search | New search executed: a
+INFO | 2015-11-26 21:14:35,481 | main | search | New search executed: a
+INFO | 2015-11-26 21:15:47,091 | main | search | New search executed: a
+INFO | 2015-11-26 21:27:52,906 | main | search | New search executed: a
+INFO | 2015-11-26 21:28:51,165 | main | search | New search executed: a
+INFO | 2015-11-26 21:31:21,176 | main | search | New search executed: a
+INFO | 2015-11-26 21:34:31,594 | main | search | New search executed: a
+INFO | 2015-11-26 21:35:39,538 | main | search | New search executed: a
+INFO | 2015-11-26 21:38:31,622 | main | search | New search executed: a
+INFO | 2015-11-26 22:09:24,678 | main | search | New search executed: a
+INFO | 2015-11-26 22:10:10,988 | main | login | User: a log in SUCCESFUL.
+INFO | 2015-11-26 22:10:23,410 | main | logout | User: a has log out.
+INFO | 2015-11-26 22:10:23,488 | main | root | Logging a test message from /
+INFO | 2015-11-26 22:11:38,793 | main | signup | New user registered: ruben123	ruben@rub.com
+INFO | 2015-11-26 22:11:50,720 | main | login | User: ruben123 log in SUCCESFUL.
+INFO | 2015-11-26 22:12:40,055 | main | search | New search executed: a
+INFO | 2015-11-26 22:26:41,544 | main | search | New search executed: a
+INFO | 2015-11-26 22:34:25,397 | main | login | User: a log in SUCCESFUL.
+INFO | 2015-11-26 22:35:16,478 | main | login | User: a log in SUCCESFUL.
+INFO | 2015-11-26 22:36:56,965 | main | logout | User: a has log out.
+INFO | 2015-11-26 22:37:01,004 | main | login | User: reh log in FAILED.
+INFO | 2015-11-26 22:37:08,291 | main | search | New search executed: stjrytruy
+INFO | 2015-11-26 22:40:04,410 | main | search | New search executed: reyjtr
+INFO | 2015-11-26 22:40:07,466 | main | search | New search executed: a
+INFO | 2015-11-26 22:41:08,633 | main | search | New search executed: a
+INFO | 2015-11-26 22:45:43,266 | main | root | Logging a test message from /
+INFO | 2015-11-26 22:45:45,970 | main | search | New search executed: a
+INFO | 2015-11-26 22:47:19,801 | main | root | Logging a test message from /
+INFO | 2015-11-26 22:47:22,894 | main | search | New search executed: a
+INFO | 2015-11-26 22:48:55,363 | main | root | Logging a test message from /
+INFO | 2015-11-26 22:48:58,920 | main | search | New search executed: a
+INFO | 2015-11-26 22:50:11,876 | main | root | Logging a test message from /
+INFO | 2015-11-26 22:50:14,470 | main | search | New search executed: a
+INFO | 2015-11-26 22:50:51,007 | main | search | New search executed: a
+INFO | 2015-11-26 22:51:14,101 | main | login | User: aaa log in SUCCESFUL.
+INFO | 2015-11-26 22:51:40,854 | main | upload | User: aaa has upload a new photo: Piña de Amigos.jpg
+INFO | 2015-11-26 22:52:53,274 | main | upload | User: aaa has upload a new photo: Amigos Zamorano.JPG
+INFO | 2015-11-26 22:53:08,456 | main | upload | User: aaa has upload a new photo: Amigos Zamorano.JPG
+INFO | 2015-11-26 22:53:22,061 | main | logout | User: aaa has log out.
+INFO | 2015-11-26 23:04:55,445 | main | root | Logging a test message from /
+INFO | 2015-11-26 23:06:48,721 | main | root | Logging a test message from /
+INFO | 2015-11-26 23:07:35,256 | main | root | Logging a test message from /
+INFO | 2015-11-26 23:07:47,185 | main | root | Logging a test message from /
+INFO | 2015-11-26 23:07:57,044 | main | login | User: a log in SUCCESFUL.
+INFO | 2015-11-26 23:08:55,025 | main | logout | User: a has log out.
+INFO | 2015-11-26 23:09:21,681 | main | search | New search executed: ruben

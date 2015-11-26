@@ -27,13 +27,37 @@ def init_db():
 		db.commit()
 
 def addUser(name, user, email, pw):
-	db = get_db ()
+	db = get_db()
 	db.cursor().execute('INSERT INTO users VALUES (?, ?, ?, ?)', (name, user, email, pw))
 	db.commit()
 	
 def getUserPassword(user):
-	db = get_db ()
+	db = get_db()
 	result = db.cursor().execute('SELECT pass FROM users WHERE user=?', (user,)).fetchone()
 	if result is not None:
 		return result[0] #the password is the 0 position because in the select we only put the pass column
 	return None
+	
+def getUser(user):
+	db = get_db()
+	result = db.cursor().execute('SELECT * FROM users WHERE user=?', (user,)).fetchone()
+	return result
+	
+def searchUser(key):
+	db = get_db()
+	likeKey = '%'+key+'%'
+	results = db.cursor().execute('SELECT * FROM users WHERE user LIKE ? OR name LIKE ?', (likeKey,likeKey,)).fetchall()
+	return results
+	
+def addImage(user, image, desc, date):
+	#with open(image, 'rb') as input_file:
+	ablob = image.read()
+	#ablob = image.file.read()
+	db = get_db()
+	db.cursor().execute('INSERT INTO images VALUES (?, ?, ?, ?)', (user, sqlite3.Binary(ablob), desc, date))
+	db.commit()
+		
+def getImages(user):
+	db = get_db()
+	results = db.cursor().execute('SELECT * FROM images WHERE user=? ORDER BY date DESC', (user,)).fetchall()
+	return results

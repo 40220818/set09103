@@ -1,10 +1,20 @@
 
 jQuery(document).ready(function() {
 	
+	/*
+		Clickable row
+	*/
+	$('#example tr').click(function() {
+        var href = $(this).find("a").attr("href");
+        if(href) {
+            window.location = href;
+        }
+    });
+
     /*
         Fullscreen background
-    */
-    $.backstretch("../static/img/backgrounds/1.jpg");
+    
+    $.backstretch("../static/img/backgrounds/1.jpg");*/
     
     $('#top-navbar-1').on('shown.bs.collapse', function(){
     	$.backstretch("resize");
