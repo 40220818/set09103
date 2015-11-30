@@ -167,3 +167,28 @@ INFO | 2015-11-26 23:07:47,185 | main | root | Logging a test message from /
 INFO | 2015-11-26 23:07:57,044 | main | login | User: a log in SUCCESFUL.
 INFO | 2015-11-26 23:08:55,025 | main | logout | User: a has log out.
 INFO | 2015-11-26 23:09:21,681 | main | search | New search executed: ruben
+INFO | 2015-11-27 12:33:07,132 | main | root | Logging a test message from /
+INFO | 2015-11-27 12:35:03,560 | main | search | New search executed: a
+INFO | 2015-11-27 12:35:27,324 | main | signup | New user registered: ruben	r@g.com
+INFO | 2015-11-27 12:35:34,682 | main | login | User: ruben log in SUCCESFUL.
+INFO | 2015-11-27 12:35:56,823 | main | upload | User: ruben has upload a new photo: Foto (3).JPG
+INFO | 2015-11-27 12:36:26,787 | main | search | New search executed: a
+INFO | 2015-11-27 12:37:06,304 | main | logout | User: ruben has log out.
+INFO | 2015-11-30 14:51:56,619 | main | root | Logging a test message from /
+INFO | 2015-11-30 14:52:01,593 | main | search | New search executed: ruben
+INFO | 2015-11-30 14:52:26,225 | main | login | User: ruben log in SUCCESFUL.
+INFO | 2015-11-30 14:52:57,623 | main | upload | User: ruben has upload a new photo: fondo-de-pantalla-bonito.jpg
+INFO | 2015-11-30 14:53:12,198 | main | upload | User: ruben has upload a new photo: Dibujo4.JPG
+INFO | 2015-11-30 14:53:22,947 | main | upload | User: ruben has upload a new photo: Dibujo3.JPG
+INFO | 2015-11-30 14:53:31,740 | main | upload | User: ruben has upload a new photo: Foto (11).JPG
+INFO | 2015-11-30 14:53:42,122 | main | upload | User: ruben has upload a new photo: Foto (5).JPG
+INFO | 2015-11-30 14:53:52,207 | main | logout | User: ruben has log out.
+INFO | 2015-11-30 14:54:17,137 | main | signup | New user registered: rubenalex	r@r.com
+INFO | 2015-11-30 14:54:27,130 | main | login | User: rubenalex log in SUCCESFUL.
+INFO | 2015-11-30 14:54:38,192 | main | upload | User: rubenalex has upload a new photo: Foto (22).JPG
+INFO | 2015-11-30 14:54:46,376 | main | logout | User: rubenalex has log out.
+INFO | 2015-11-30 14:54:54,856 | main | login | User: ruben123 log in SUCCESFUL.
+INFO | 2015-11-30 14:55:05,841 | main | upload | User: ruben123 has upload a new photo: Foto (15).JPG
+INFO | 2015-11-30 14:55:12,183 | main | search | New search executed: ruben
+INFO | 2015-11-30 14:55:43,150 | main | search | New search executed: abg.p
+INFO | 2015-11-30 14:55:47,085 | main | root | Logging a test message from /
